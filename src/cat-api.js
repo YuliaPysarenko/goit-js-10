@@ -83,6 +83,6 @@ function errorFetchBreeds() {
       Notify.failure (`Oops! Something went wrong! Try reloading the page!`);
 }
 
-export default { fetchBreeds, fetchCatByBreed, renderCat, errorFetchBreeds}
+export { fetchBreeds, fetchCatByBreed }
     
 
