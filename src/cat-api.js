@@ -11,18 +11,12 @@ link.breadSelect.setAttribute(`disabled`, true);
 link.catInfo.setAttribute(`disabled`, true);
 
 function onLoader() {
- firstLoaderSelect();
-}
-
-function firstLoaderSelect() {
-    setTimeout(() => {
-      if (!preloaderId.classList.contains(`active_loader`)) {
+    if (!preloaderId.classList.contains(`active_loader`)) {
         preloaderId.classList.add(`active_loader`);
         link.breadSelect.removeAttribute(`disabled`);
       }
-    },600)
 }
-  
+
 function fetchBreeds() {
 
     fetch(`https://api.thecatapi.com/v1/breeds?api_key=${IPA_KEY}`)
