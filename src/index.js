@@ -1,16 +1,13 @@
-//  import catApi from './cat-api';
+import {fetchBreeds,fetchCatByBreed} from './cat-api';
 import linksDokQuerySel from './links';
-import { fetchBreeds, fetchCatByBreed } from './cat-api';
 
 const link = linksDokQuerySel();
 link.breadSelect.addEventListener(`change`, onChangeSelectOption);
 
-// catApi.fetchBreeds();
-fetchBreeds()
+fetchBreeds();
  
 function onChangeSelectOption() {
-    const selectedOptionValue = link.breadSelect.value;
-    //    catApi.fetchCatByBreed(selectedOptionValue); 
-     fetchCatByBreed(selectedOptionValue); 
+const selectedOptionValue = link.breadSelect.value;
+fetchCatByBreed(selectedOptionValue); 
 }   
 
